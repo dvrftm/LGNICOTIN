@@ -1,4 +1,4 @@
-﻿import os
+import os
 import logging
 from telegram import Update, ReplyKeyboardMarkup, ReplyKeyboardRemove
 from telegram.ext import (
@@ -23,21 +23,19 @@ FIELDS = [
 ASKING = 0
 CANCEL_KEY = "لغو فرم"
 
-FORM_TEMPLATE = """𓆩 🩸 ʟɢ ɴɪᴄᴏᴛɪɴ 🐊 𓆪
-━━━━━━━━━━━━━━━━━━━━
-⛓️ ɴᴀᴍᴇ 〢 اسم :
-↳ 🩸 {name}
-⛓️ ᴀɢᴇ 〢 سن :
-↳ 🩸 {age}
-⛓️ ᴄɪᴛʏ 〢 شهر :
-↳ 🩸 {city}
-⛓️ ᴏʀɪᴇɴᴛᴀᴛɪᴏɴ 〢 گرایش :
-↳ 🩸 {orientation}
-⛓️ ʀᴇʟᴀᴛɪᴏɴsʜɪᴘ sᴛᴀᴛᴜs 〢 وضعیت تاهل :
-↳ 🩸 {relationship_status}
-━━━━━━━━━━━━━━━━━━━━
-🖤 ᴡᴇ ᴀʀᴇ ᴛʜᴇ ᴅᴀʀᴋ sɪᴅᴇ 🩸
-𓆩 🐊 ʟɢ ɴɪᴄᴏᴛɪɴ 🐊 𓆪"""
+FORM_TEMPLATE = """🩸🐊 ʟɢ ɴɪᴄᴏᴛɪɴ 🐊🩸
+𓆩 🥀 𝕯𝖆𝖗𝖐 𝕾𝖔𝖚𝖑𝖘 🥀 𓆪
+━━━━━━━━━━━━━━━
+༺ 🩸 𝐏𝐄𝐑𝐒𝐎𝐍𝐀𝐋 𝐅𝐎𝐑𝐌 🩸 ༻
+𖤐 اسم: {name}
+𖤐 سن: {age}
+𖤐 شهر: {city}
+𖤐 گرایش: {orientation}
+𖤐 وضعیت تأهل: {relationship_status}
+━━━━━━━━━━━━━━━
+🖤 𝕯𝖆𝖗𝖐 𝖛𝖎𝖇𝖊𝖘 • 𝕽𝖊𝖉 𝖘𝖔𝖚𝖑 🖤
+༒︎ 𝕹𝖔 𝖗𝖚𝖑𝖊𝖘, 𝖓𝖔 𝖋𝖊𝖆𝖗 ༒︎
+🥀 𓆩🩸🐊 ʟɢ ɴɪᴄᴏᴛɪɴ 🐊🩸 𓆪"""
 
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
